@@ -48,7 +48,7 @@ class BaseClient {
             }
 
             else -> {
-                return NetworkHelper.Message("An Unexpected Error Occurred")
+                return NetworkHelper.Message("Error Fetching Response")
             }
         }
     }
@@ -74,7 +74,7 @@ fun decodeMessage(statusresponse: String): String{
 
         return  value
     } else {
-       return  "An Error Occurred"
+       return  "Error Fetching Response"
     }
 }
 

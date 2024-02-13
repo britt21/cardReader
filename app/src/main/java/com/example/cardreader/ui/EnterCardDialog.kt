@@ -1,6 +1,7 @@
 package com.example.cardreader.ui
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -90,8 +91,6 @@ class EnterCardDialog :DialogFragment() {
         val imm = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(binding.tvPinblockVale.windowToken, 0)
 
-
-
     }
 
     private fun observeCustomerInfo() {
@@ -104,7 +103,11 @@ class EnterCardDialog :DialogFragment() {
 
                 is NetworkHelper.Success -> {
                     hideLoading(dimbg,null)
+                    hideDialog(dimbg, dialogbg,null)
                     cardViewModel.liveCustomerInfo.removeObservers(this)
+                    var intent = Intent(requireContext(),CardDetailsHome::class.java)
+                    intent.putExtra("cardinfo",info.data)
+                    startActivity(intent)
                 }
 
                 is NetworkHelper.Message -> {
