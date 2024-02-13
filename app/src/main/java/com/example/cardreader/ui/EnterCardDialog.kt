@@ -85,13 +85,15 @@ class EnterCardDialog :DialogFragment() {
     }
 
     private fun validateCustomerInfo(info: String) {
-        cardViewModel.getCustomerInfo(info)
-        observeCustomerInfo()
+        if (info.isNotEmpty()) {
+            cardViewModel.getCustomerInfo(info)
+            observeCustomerInfo()
 
-        val imm = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(binding.tvPinblockVale.windowToken, 0)
-
-    }
+            val imm =
+                requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(binding.tvPinblockVale.windowToken, 0)
+        }
+        }
 
     private fun observeCustomerInfo() {
         cardViewModel.liveCustomerInfo.observe(this, Observer { info ->
