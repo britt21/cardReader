@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="litgrey">#676767</color>
+    <color name="app_blu">#303F9F</color>
+    <color name="app_purple">#441A91</color>
+    <color name="lit_blu">#2E80F4</color>
+    <color name="lit_grey">#858585</color>
+    <color name="lit_black">#C5C5C5</color>
+    <color name="litterwhite">#5B616161</color>
+    <color name="grey700">#9E9E9E</color>
+    <color name="red">#FF0000</color>
+    <color name="litter_blu">#0019B6</color>
+    <color name="float_blu">#1068FA</color>
+    <color name="lit_green">#10B759</color>
+    <color name="litter_grey">#CFCFCF</color>
+    <color name="fade_blu">#E8EBFB</color>
+    <color name="drk_blu">#B5BFFF</color>
+    <color name="txt_blu">#1B2E4B</color>
+    <color name="filterbg">#F5F2FA</color>
+
+</resources>
