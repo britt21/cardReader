@@ -139,12 +139,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:background="@drawable/pay_bg_dark"
         android:id="@+id/dimbg"
-        android:alpha="0.8"
+        android:layout_width="0dp"
+        android:layout_height="330dp"
+        android:alpha="1"
+        android:background="@drawable/pay_bg_dark"
         android:clickable="true"
-        android:layout_height="0dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,9 +155,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="330dp"
             android:background="@drawable/dialog_bg"
-            android:visibility="invisible" >
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -167,24 +173,25 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:foregroundGravity="center"
-            android:visibility="visible"
-            app:lottie_rawRes="@raw/loading"
             android:scaleX="2"
             android:scaleY="2"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
+            android:visibility="visible"
+            android:layout_marginBottom="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/dlogbg"
-            android:layout_width="300dp"
-            android:layout_height="320dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/dialog_bg"
-            android:visibility="invisible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -196,11 +203,12 @@
                 android:id="@+id/lottieAnimationView2"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:lottie_autoPlay="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
                 app:lottie_rawRes="@raw/network" />
 
             <TextView
@@ -212,7 +220,7 @@
                 android:layout_marginEnd="32dp"
                 android:fontFamily="@font/poppins_bold"
                 android:maxLength="100"
-                android:text="Account already verified"
+                android:text="Account already verified\n\n"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15dp"
@@ -223,19 +231,28 @@
             <Button
                 android:id="@+id/dialogbtn"
                 style="@style/StylishButton"
-                android:layout_width="0dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Confirm"
+                android:text="CLOSE"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_text" />
+
+            <Button
+                android:id="@+id/retrybtn"
+                style="@style/StylishButton"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Retry"
+                app:layout_constraintBottom_toBottomOf="@+id/dialogbtn"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toTopOf="@+id/dialogbtn" />        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
