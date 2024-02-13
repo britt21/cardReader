@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cardreader.data.card_info.response.CardInfoResponse
+import com.example.cardreader.data.card_info.response.new_card_response.NewCardResponse
 import com.example.cardreader.domain.cardService
 import com.example.cardreader.utils.helper.BaseClient
 import com.example.cardreader.utils.helper.NetworkHelper
@@ -14,7 +15,7 @@ class CardViewModel : ViewModel() {
     var baseClient = BaseClient()
 
 
-    var liveCustomerInfo: MutableLiveData<NetworkHelper<CardInfoResponse>> = MutableLiveData()
+    var liveCustomerInfo: MutableLiveData<NetworkHelper<NewCardResponse>> = MutableLiveData()
 
     fun getCustomerInfo(cardNumber: String) {
         liveCustomerInfo.value = NetworkHelper.Loading()

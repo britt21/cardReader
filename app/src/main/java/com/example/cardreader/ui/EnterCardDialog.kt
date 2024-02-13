@@ -106,7 +106,7 @@ class EnterCardDialog :DialogFragment() {
                     hideDialog(dimbg, dialogbg,null)
                     cardViewModel.liveCustomerInfo.removeObservers(this)
                     var intent = Intent(requireContext(),CardDetailsHome::class.java)
-                    intent.putExtra("cardinfo",info.data)
+                    intent.putExtra("cardInfo",info.data)
                     startActivity(intent)
                 }
 

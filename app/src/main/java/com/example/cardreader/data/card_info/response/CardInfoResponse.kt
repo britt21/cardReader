@@ -12,3 +12,4 @@ data class CardInfoResponse(
     val scheme: String? = "",
     val type: String? = ""
 ): Parcelable
+
